@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg3"
     tools:context=".HealthTipsActivity">
 
   <androidx.constraintlayout.widget.Barrier
@@ -13,30 +14,47 @@
       android:layout_height="wrap_content"
       app:barrierDirection="top" />
 
-  <EditText
-      android:id="@+id/editTextText4"
+  <TextView
+      android:id="@+id/textView4"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:ems="10"
-      android:inputType="text"
-      android:text="HealthTips"
-      android:textSize="24sp"
-      android:textStyle="bold"
-      tools:layout_editor_absoluteX="16dp"
-      tools:layout_editor_absoluteY="29dp" />
+      android:text="Health Tips"
+      android:textSize="48sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.019" />
 
-  <VideoView
-      android:id="@+id/videoView"
-      android:layout_width="393dp"
-      android:layout_height="193dp"
-      tools:layout_editor_absoluteX="9dp"
-      tools:layout_editor_absoluteY="118dp" />
+  <ScrollView
+      android:layout_width="409dp"
+      android:layout_height="794dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView4"
+      tools:layout_editor_absoluteX="1dp">
 
-  <VideoView
-      android:id="@+id/videoView3"
-      android:layout_width="393dp"
-      android:layout_height="193dp"
-      tools:layout_editor_absoluteX="16dp"
-      tools:layout_editor_absoluteY="423dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <VideoView
+          android:id="@+id/videoView"
+          android:layout_width="match_parent"
+          android:layout_height="217dp"
+          android:layout_marginTop="60dp" />
+
+      <VideoView
+          android:id="@+id/videoView3"
+          android:layout_width="match_parent"
+          android:layout_height="217dp" />
+
+      <VideoView
+          android:id="@+id/videoView4"
+          android:layout_width="match_parent"
+          android:layout_height="217dp" />
+    </LinearLayout>
+  </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
