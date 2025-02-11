@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:padding="16dp"
+    tools:context=".PrescriptionManagerActivity">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/prescriptionTitle"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Prescription Manager"
+        android:textAlignment="center"
+        android:textColor="#4CAF50"
+        android:textColorHint="#8BC34A"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/prescriptionIdLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <!-- Prescription ID -->
+    <TextView
+        android:id="@+id/prescriptionIdLabel"
+        android:layout_width="380dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="27dp"
+        android:background="#4CAF50"
+        android:backgroundTint="#4CAF50"
+        android:fontFamily="sans-serif"
+        android:text="Prescription ID"
+        android:textColor="#0D47A1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/prescriptionId"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prescriptionTitle"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/prescriptionId"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#012622"
+        android:fontFamily="sans-serif-medium"
+        android:hint="Enter Prescription ID"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/medicationNameLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prescriptionIdLabel"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <!-- Medication Name -->
+    <TextView
+        android:id="@+id/medicationNameLabel"
+        android:layout_width="380dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="28dp"
+        android:background="#4CAF50"
+        android:backgroundTint="#4CAF50"
+        android:fontFamily="sans-serif"
+        android:text="Medication Name"
+        android:textColor="#0D47A1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/medicationName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prescriptionId"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <!-- Dosage -->
+    <EditText
+        android:id="@+id/medicationName"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#012622"
+        android:fontFamily="sans-serif-medium"
+        android:hint="Enter Medication Name"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.966"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medicationNameLabel" />
+
+    <TextView
+        android:id="@+id/dosageLabel"
+        android:layout_width="380dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="28dp"
+        android:background="#4CAF50"
+        android:backgroundTint="#4CAF50"
+        android:fontFamily="sans-serif"
+        android:text="Dosage"
+        android:textColor="#0D47A1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/dosage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medicationName"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <!-- Instructions -->
+
+    <!-- Upload Prescription Image -->
+
+    <!-- Save Prescription Button -->
+
+    <EditText
+        android:id="@+id/dosage"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#012622"
+        android:fontFamily="sans-serif-medium"
+        android:hint="Enter Dosage"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/instructionsLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dosageLabel"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/instructionsLabel"
+        android:layout_width="380dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:background="#4CAF50"
+        android:backgroundTint="#4CAF50"
+        android:fontFamily="sans-serif"
+        android:text="Instructions"
+        android:textColor="#0D47A1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/instructions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dosage"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/instructions"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#012622"
+        android:fontFamily="sans-serif-medium"
+        android:hint="Enter Instructions"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/savePrescriptionButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionsLabel"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/savePrescriptionButton"
+        android:layout_width="318dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Save Prescription"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/clearPrescriptionButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructions"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/clearPrescriptionButton2"
+        android:layout_width="318dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Clear Prescription"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/savePrescriptionButton"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

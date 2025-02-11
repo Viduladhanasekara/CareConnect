@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SymptomsActivity">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="305dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        android:text="Symptoms Diagnosis"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Symptom Input Form -->
+
+    <!-- Symptom History Section -->
+
+    <!-- Symptom History RecyclerView -->
+
+    <!-- Export Data Button -->
+
+    <LinearLayout
+        android:id="@+id/symptom_input_form"
+        android:layout_width="390dp"
+        android:layout_height="204dp"
+        android:layout_marginTop="36dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView8">
+
+        <!-- Symptom Name Input -->
+
+        <!-- Symptom Severity Slider -->
+        <AutoCompleteTextView
+            android:id="@+id/symptom_input"
+            android:layout_width="356dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="8dp"
+            android:hint="Enter Symptoms (e.g., Fever, Cough)"
+            android:importantForAccessibility="yes" />
+
+        <SeekBar
+            android:id="@+id/symptom_severity_slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:importantForAccessibility="yes"
+            android:max="10"
+            android:progress="5" />
+
+        <!-- Symptom Duration Input -->
+        <EditText
+            android:id="@+id/symptom_duration_input"
+            android:layout_width="362dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="16dp"
+            android:hint="Duration (e.g., 3 days)"
+            android:importantForAccessibility="yes"
+            android:inputType="number" />
+
+        <!-- Save Button -->
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/history_section_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:text="Symptom History"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/symptom_input_form" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/symptom_history_recycler_view"
+        android:layout_width="361dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/history_section_header" />
+
+    <Button
+        android:id="@+id/export_data_button"
+        android:layout_width="387dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="@color/green_primary"
+        android:text="Export Symptom Data"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/symptom_history_recycler_view" />
+
+    <Button
+        android:id="@+id/save_symptom_button"
+        android:layout_width="386dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/green_primary"
+        android:text="Save Symptom"
+        android:textColor="#E7E4E4"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/history_section_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/symptom_input_form"
+        app:layout_constraintVertical_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
